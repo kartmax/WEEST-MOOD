@@ -1,0 +1,133 @@
+main {
+	display: none;
+}
+
+.main-content {
+	background: #00463a url(../img/bg-main-content.png) no-repeat;
+	border-top: 7px solid #ff3a3a;
+	border-bottom: 7px solid #ff3a3a;
+
+	>p {
+		padding-top: 10px;
+		color: $main-color-2;
+		@include fontSize(12px);
+		font-weight: 700;
+		text-align: center;
+	}
+
+	.wrap {
+		border: 5px solid $main-color-2;
+		padding: 85px 55px 170px 55px;
+
+		@media only screen and (max-width : 992px){
+			padding: 50px 20px 50px 20px;
+		}
+
+		@media only screen and (max-width : 480px){
+			border: 2px solid $main-color-2;
+			padding: 30px 15px 30px 15px;
+		}
+	}
+
+	.img {
+		position: relative;
+		padding-bottom: 83px;
+		text-align: center;
+
+		@media only screen and (max-width : 992px){
+			padding-bottom: 58px;
+		}
+
+		p {
+			color: $main-color-2;
+			@include fontSize(30px);
+			font-weight: 400;
+			padding-top: 30px;
+			letter-spacing: 3px;
+		}
+
+		.title-2 {
+			padding-top: 58px;
+			@include fontSize(36px);
+			font-weight: 700;
+
+			@media only screen and (max-width : 992px){
+				padding-top: 30px;
+			}
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 11px;
+
+			background-color: rgba(0,0,0,0);
+			background-image: radial-gradient($main-color-2 3px, transparent 4px);
+			background-size: 15px 15px;
+			background-position: left top;
+		}
+	}
+
+	.main-text {
+		padding-top: 137px;
+
+		@media only screen and (max-width : 992px){
+			padding-top: 50px;
+		}
+
+		.title {
+			color: #fff;
+			@include fontSize(36px);
+			padding-bottom: 100px;
+			font-weight: 700;
+			text-align: center;
+			letter-spacing: 10px;
+
+			@media only screen and (max-width : 992px){
+				padding-bottom: 50px;
+			}
+		}
+
+		.text {
+			position: relative;
+			columns: 2;
+			column-gap: 122px;
+
+			@media only screen and (max-width : 992px){
+				column-gap: 50px;
+			}
+
+			@media only screen and (max-width : 680px){
+				columns: 1;
+			}
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				content: '';
+				width: 2px;
+				height: 100%;
+				background: $main-color-2;
+
+				@media only screen and (max-width : 680px){
+					display: none;
+				}
+			}
+
+			p {
+				color: #fff;
+				font-weight: 700;
+				line-height: 1.2;
+			}
+
+			p + p {
+				margin-top: 20px;
+			}
+		}
+	}
+}

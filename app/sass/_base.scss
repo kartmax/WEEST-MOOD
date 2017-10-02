@@ -1,0 +1,111 @@
+@import "bourbon";
+@import "vars";
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+* {
+	box-sizing: border-box;
+	line-height: 1.2;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+	}
+
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+
+body {
+	position: relative;
+	max-width: 1366px;
+	min-width: 280px;
+	margin: 0 auto;
+	font-family: $default-font;
+	overflow-x: hidden;
+}
+
+html {
+	background: grey;
+	font-size: 16px!important;
+
+	@media only screen and (max-width : 767px){
+		font-size: 14px!important;
+	}
+
+	@media only screen and (max-width : 380px){
+		font-size: 12px!important;
+	}
+}
+
+//Mixin to calculate REM
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+	font-size: $size; //Fallback in px
+	font-size: calculateRem($size);
+}
+
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 200px;
+	height: 60px;
+	font-weight: 700;
+	background-color: $main-color;
+	color: #fff;
+	transition: 0.2s;
+
+	&:hover {
+		background-color: $hover-color;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.is-active {
+	color: $hover-color !important;
+}
+
+.padding-vertical {
+	max-width: 100%;
+	padding: 50px;
+
+	@media only screen and (max-width : 992px){
+		padding: 15px;
+	}
+}
+
+
+
+
+
+

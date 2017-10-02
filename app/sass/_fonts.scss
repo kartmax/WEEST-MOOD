@@ -1,0 +1,11 @@
+@import "bourbon";
+
+//@include font-face("roboto", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf);
+//@include font-face("roboto", "../fonts/RobotoBold/RobotoBold", bold, $file-formats: eot woff ttf);
+@include font-face("centurygothic", "../fonts/centurygothic/GOTHIC", $file-formats: TTF);
+@include font-face("centurygothic", "../fonts/centurygothicbold/GOTHICB", $file-formats: TTF);
+
+
+//Font Awesome
+@import "../fonts/font-awesome/scss/font-awesome";
+@include font-face("FontAwesome", "../fonts/font-awesome/fonts/fontawesome-webfont",  $file-formats: svg eot woff woff2 ttf);

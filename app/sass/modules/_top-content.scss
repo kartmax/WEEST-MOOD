@@ -1,0 +1,39 @@
+.top-content {
+  background: #fff;
+
+  p {
+    color: #00a98f;
+    @include fontSize(36px);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .title-1 {
+    padding-top: 76px;
+    padding-bottom: 65px;
+
+    @media only screen and (max-width : 992px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @media only screen and (max-width : 480px){
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .title-2 {
+    @include fontSize(42px);
+    letter-spacing: 5px;
+    padding-bottom: 220px;
+
+    @media only screen and (max-width : 992px){
+      padding-bottom: 50px;
+    }
+
+    @media only screen and (max-width : 480px){
+      padding-bottom: 30px;
+    }
+  }
+}
